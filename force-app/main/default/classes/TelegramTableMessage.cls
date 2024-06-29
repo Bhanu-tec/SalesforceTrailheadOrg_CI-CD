@@ -1,3 +1,4 @@
+// Table Format Messgage to Telegram Group using api.
 public class TelegramTableMessage {
     public String chatId;
     public String message;
