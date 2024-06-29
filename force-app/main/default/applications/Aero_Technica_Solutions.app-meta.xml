@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#0070D2</headerColor>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <description>App for Salesforce Inbound Integration Specialist Superbadge units.</description>
+    <formFactors>Small</formFactors>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <label>Aero Technica Solutions</label>
+    <navType>Standard</navType>
+    <tabs>standard-Account</tabs>
+    <tabs>standard-Contact</tabs>
+    <tabs>standard-Opportunity</tabs>
+    <tabs>standard-Case</tabs>
+    <tabs>standard-Task</tabs>
+    <tabs>standard-Contract</tabs>
+    <tabs>standard-Product2</tabs>
+    <tabs>standard-Asset</tabs>
+    <tabs>Insurance__c</tabs>
+    <tabs>Claim__c</tabs>
+    <tabs>Contact_Certification__c</tabs>
+    <tabs>Error_Log__c</tabs>
+    <tabs>Mission__c</tabs>
+    <tabs>smon__Streaming_Monitor</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>Aero_Technica_Solutions_UtilityBar</utilityBar>
+</CustomApplication>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Contact who picks up the project. --></help>
+    <label><!-- Pilot --></label>
+    <name>Pilot__c</name>
+    <relationshipLabel><!-- Mission --></relationshipLabel>
+</CustomFieldTranslation>

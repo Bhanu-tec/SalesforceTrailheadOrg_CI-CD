@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Permissible Fly Zone --></label>
+    <name>Permissible_Fly_Zone__c</name>
+    <picklistValues>
+        <masterLabel>Authorized</masterLabel>
+        <translation><!-- Authorized --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Recommended</masterLabel>
+        <translation><!-- Recommended --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Regulated</masterLabel>
+        <translation><!-- Regulated --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Restricted</masterLabel>
+        <translation><!-- Restricted --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Permissible_Fly_Zone__c</fullName>
+    <description>allowed area&apos;s for specific air craft</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Permissible Fly Zone</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Recommended</fullName>
+                <default>true</default>
+                <label>Recommended</label>
+            </value>
+            <value>
+                <fullName>Regulated</fullName>
+                <default>false</default>
+                <label>Regulated</label>
+            </value>
+            <value>
+                <fullName>Authorized</fullName>
+                <default>false</default>
+                <label>Authorized</label>
+            </value>
+            <value>
+                <fullName>Restricted</fullName>
+                <default>false</default>
+                <label>Restricted</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

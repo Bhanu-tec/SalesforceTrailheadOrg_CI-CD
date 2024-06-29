@@ -1,0 +1,22 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 12-15-2023
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="Delivery Progress">
+        <lightning-progress-indicator type="base" current-step={current}>
+            <lightning-progress-step label="Pending" value="Pending">
+            </lightning-progress-step>
+            <lightning-progress-step label="Shipped" value="Shipped">
+            </lightning-progress-step>
+            <lightning-progress-step label="Out for Delivery" value="Out for Delivery">
+            </lightning-progress-step>
+            <lightning-progress-step label="Delivered" value="Delivered">
+            </lightning-progress-step>
+        </lightning-progress-indicator>
+    </lightning-card>
+    
+</template>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Start_and_End_Dates</fullName>
+    <active>true</active>
+    <errorConditionFormula>Start_Date__c &gt;= End_Date__c</errorConditionFormula>
+    <errorMessage>Start and end dates cannot be the same</errorMessage>
+</ValidationRule>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stacktrace__c</fullName>
+    <description>Exception Stacktrace</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Exception Stacktrace</inlineHelpText>
+    <label>Stacktrace</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

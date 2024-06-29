@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Amount paid at the completion of the project. --></help>
+    <label><!-- Pay --></label>
+    <name>Pay__c</name>
+</CustomFieldTranslation>

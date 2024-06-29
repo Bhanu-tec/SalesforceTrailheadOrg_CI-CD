@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Single-Rotor</fullName>
+        <default>false</default>
+        <label>Single-Rotor</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Multi-Rotor</fullName>
+        <default>false</default>
+        <label>Multi-Rotor</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Fixed-Wing</fullName>
+        <default>false</default>
+        <label>Fixed-Wing</label>
+    </standardValue>
+    <standardValue>
+        <fullName>MALE</fullName>
+        <default>false</default>
+        <label>MALE</label>
+    </standardValue>
+    <standardValue>
+        <fullName>HALE</fullName>
+        <default>false</default>
+        <label>HALE</label>
+    </standardValue>
+</StandardValueSet>
