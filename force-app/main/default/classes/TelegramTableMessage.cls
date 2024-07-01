@@ -4,6 +4,7 @@ public class TelegramTableMessage {
     public String message;
     public Boolean parseMode;
     
+    //Parameter Constructor
     public TelegramTableMessage(String chatId, String message, Boolean parseMode) {
         this.chatId = chatId;
         this.message = message;
