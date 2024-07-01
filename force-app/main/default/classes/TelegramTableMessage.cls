@@ -1,6 +1,6 @@
 // Table Format Messgage to Telegram Group using api.
 public class TelegramTableMessage {
-    public String chatId;
+    public String chatId;// telegram chat Id
     public String message;
     public Boolean parseMode;
     
