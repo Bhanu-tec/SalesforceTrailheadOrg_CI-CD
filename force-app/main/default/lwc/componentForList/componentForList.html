@@ -1,0 +1,18 @@
+<template>
+    <div class="slds-box" style="background-color:grey;">
+
+        <div class="slds-grid slds-wrap">
+
+           <template for:each={listOfRecords} for:item="rec">
+
+            <div key={rec} class="slds-col slds-size_6-of-12">
+
+                <lightning-card  title={rec}>
+                    <lightning-button label="New" slot="actions"></lightning-button>
+                    <p class="slds-p-horizontal_small">Name, AccountId, BillingCity, Phone</p>
+                </lightning-card>
+            </div>
+        </template>
+        </div>
+    </div>
+</template>

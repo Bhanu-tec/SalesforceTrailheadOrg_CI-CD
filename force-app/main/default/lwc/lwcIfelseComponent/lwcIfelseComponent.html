@@ -1,0 +1,31 @@
+<template>
+    <lightning-card title="example">
+        <lightning-button slot="actions" label="Refresh" onclick={refresh}></lightning-button>
+        <p>Value: {value}</p>
+        <br><br>
+
+        <template if:true={value}>
+            <lightning-card>
+                <h3 slot="title">
+                    <lightning-icon icon-name="utility:connected_apps" size="small"></lightning-icon>
+                    Card Title
+                </h3>
+                <div slot="footer">
+                        <lightning-badge label="Tag1"></lightning-badge>
+                        <lightning-badge label="Tag2"></lightning-badge>
+                        <lightning-badge label="Tag3"></lightning-badge>
+                </div>
+                <p class="slds-p-horizontal_small">Card Body (custom component)</p>
+            </lightning-card>
+        </template>
+
+        <template if:false={value}>
+            <lightning-card  variant="Narrow"  title="Hello" icon-name="standard:account">
+                <lightning-button-icon  icon-name="utility:down" variant="border-filled" alternative-text="Show More" slot="actions"></lightning-button-icon>
+                <p class="slds-p-horizontal_small">Card Body Narrow (custom component)</p>
+                <p slot="footer">Card Footer</p>
+            </lightning-card>
+        </template>
+
+    </lightning-card>
+</template>

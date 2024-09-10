@@ -1,3 +1,16 @@
 <template>
-    
+    <lightning-card title="Asset Disconnection Notice" icon-name="standard:disconnect">
+        <div class="slds-m-around_medium">
+            <lightning-button label="Subscribe to Asset Disconnection Events" onclick={handleSubscribe} class="slds-m-bottom_small"></lightning-button>
+            <lightning-button label="Unsubscribe from Asset Disconnection Events" onclick={handleUnsubscribe}></lightning-button>
+        </div>
+        
+        <template if:true={status}>
+            <p>Asset with Identifier {identifier} is now disconnected.</p>
+        </template>
+        
+        <template if:false={status}>
+            <p>No disconnection event detected yet.</p>
+        </template>
+    </lightning-card>
 </template>

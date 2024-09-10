@@ -1,0 +1,11 @@
+<template>
+    <div class="slds-p-around_medium">
+        <lightning-input type="search" value={searchTerm} onchange={handleSearch} label="Search Assets"
+            class="slds-m-bottom_small">
+        </lightning-input>
+        <lightning-datatable data={filteredAssets} columns={columns} key-field="Id" onrowselection={handleRowSelection}>
+        </lightning-datatable>
+        <lightning-button label="Next" variant="brand" onclick={handleNext}>
+        </lightning-button>
+    </div>
+</template>

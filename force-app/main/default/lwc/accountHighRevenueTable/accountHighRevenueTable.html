@@ -1,0 +1,100 @@
+<!--<template>
+    <lightning-card variant="base">
+        <lightning-input type="number" label="No.of Records" title="No.of Records" onkeyup={setCount}></lightning-input>
+    </lightning-card>
+
+    <lightning-card icon-name="standard:account" variant="base" title="High Revenue Accounts">
+        <lightning-datatable key-field="id" data={accountData} columns={accountColumns} show-row-number-column
+            hide-checkbox-column max-row-selection={rowsToShow} wrap-text-column="Type" horizontal-align="center"
+            vertical-align="center"></lightning-datatable>
+    </lightning-card>
+</template>-->
+<!--<template>
+    <div class="slds-var-p-around_medium">
+        <lightning-card title="Account List">
+            <template if:true={accounts}>
+                <table
+                    class="slds-table slds-table_bordered slds-table_cell-buffer slds-table_fixed-layout">
+                    <thead>
+                        <tr class="slds-text-title_caps">
+                            <th scope="col">
+                                <div class="slds-cell-wrap"></div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-cell-wrap">Name</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-cell-wrap">Account Number</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-cell-wrap">Industry</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-cell-wrap">Annual Revenue</div>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <template for:each={accounts} for:item="account">
+                            <tr key={account.Id}>
+                                <td>
+                                    <input type="checkbox" class="slds-checkbox__input" />
+                                </td>
+                                <td>
+                                    <div class="slds-cell-wrap">{account.Name}</div>
+                                </td>
+                                <td>
+                                    <div class="slds-cell-wrap">{account.AccountNumber}</div>
+                                </td>
+                                <td>
+                                    <div class="slds-cell-wrap">{account.Industry}</div>
+                                </td>
+                                <td>
+                                    <div class="slds-cell-wrap">{account.AnnualRevenue}</div>
+                                </td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+            </template>
+        </lightning-card>
+    </div>
+</template>-->
+<template>
+    <lightning-card title="Link Products" icon-name="standard:product">
+        <table class="slds-table slds-table_bordered">
+            <thead>
+                <tr>
+                    <th scope="col">
+                        <div class="slds-truncate">Link / Unlink</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate">ID</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate">Product Name</div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <template for:each={products} for:item="product">
+                    <tr key={product.id} id={product.id} onchange={handleRowClick}>
+                        <td>
+                            <lightning-input type="checkbox" checked={product.isLinked} data-id={product.id} onchange={handleCheckboxChange}></lightning-input>
+                        </td>
+                        <td>
+                            <div class="slds-truncate">{product.id}</div>
+                        </td>
+                        <td>
+                            <div class="slds-truncate">{product.name}</div>
+                        </td>
+                    </tr>
+                </template>
+            </tbody>
+        </table>
+        <div class="slds-p-top_medium">
+            <lightning-button label="Close" onclick={handleClose}></lightning-button>
+        </div>
+    </lightning-card>
+</template>

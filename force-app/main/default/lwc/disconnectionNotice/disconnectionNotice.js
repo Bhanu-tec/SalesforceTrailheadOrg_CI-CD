@@ -1,33 +1,62 @@
-import { LightningElement } from 'lwc';
+import { LightningElement, track } from 'lwc';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
-
+import { subscribe, unsubscribe } from 'lightning/empApi';
 
 export default class DisconnectionNotice extends LightningElement {
+    @track status;
+    @track identifier;
     subscription = {};
-    status;
-    identifier;
-    channelName;
+    channelName = '/event/Asset_Disconnection__e';
 
     connectedCallback() {
-        //this.handleSubscribe();
-    }
-
-    renderedCallback(){
-        
+        this.handleSubscribe();
     }
 
     handleSubscribe() {
-        //Implement your subscribing solution here 
+        // Callback invoked whenever a new event message is received
+        const messageCallback = (response) => {
+            console.log('New message received: ', JSON.stringify(response));
+            const assetId = response.data.payload.Asset_Identifier__c;
+            const isDisconnected = response.data.payload.Disconnected__c;
+
+            if (isDisconnected) {
+                this.showSuccessToast(assetId);
+            } else {
+                this.showErrorToast();
+            }
+        };
+
+        subscribe(this.channelName, -1, messageCallback)
+            .then(response => {
+                this.subscription = response;
+                console.log('Subscribed to channel:', this.channelName);
+            })
+            .catch(error => {
+                console.error('Subscription error:', error);
+            });
     }
 
     disconnectedCallback() {
-        //Implement your unsubscribing solution here
+        this.handleUnsubscribe();
+    }
+
+    handleUnsubscribe() {
+        if (this.subscription) {
+            unsubscribe(this.subscription)
+                .then(() => {
+                    console.log('Unsubscribed from channel');
+                    this.subscription = null;
+                })
+                .catch(error => {
+                    console.error('Unsubscribe error:', error);
+                });
+        }
     }
 
     showSuccessToast(assetId) {
         const event = new ShowToastEvent({
             title: 'Success',
-            message: 'Asset Id '+assetId+' is now disconnected',
+            message: `Asset Id ${assetId} is now disconnected`,
             variant: 'success',
             mode: 'dismissable'
         });
@@ -43,5 +72,4 @@ export default class DisconnectionNotice extends LightningElement {
         });
         this.dispatchEvent(event);
     }
-
 }
